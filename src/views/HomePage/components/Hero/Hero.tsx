@@ -28,7 +28,7 @@ const Hero = (): JSX.Element => {
       data-jarallax
       data-speed="0.2"
       position={'relative'}
-      minHeight={{ xs: 400, sm: 500, md: 600 }}
+      minHeight={{ xs: 400, sm: 500, md: 700 }}
       display={'flex'}
       alignItems={'center'}
       marginTop={-13}
