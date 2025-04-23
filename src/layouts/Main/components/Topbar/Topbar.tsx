@@ -1,10 +1,12 @@
-import React from 'react';
+import { JSX } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import { NavItem } from './components';
+import TopNav from 'components/TopNav';
+import ThemeModeToggler from 'components/ThemeModeToggler';
 
 interface Props {
   // eslint-disable-next-line @typescript-eslint/ban-types
@@ -27,6 +29,7 @@ const Topbar = ({
 }: Props): JSX.Element => {
   const theme = useTheme();
   const { mode } = theme.palette;
+
   const {
     landings: landingPages,
     secondary: secondaryPages,
@@ -47,7 +50,7 @@ const Topbar = ({
         display={'flex'}
         component="a"
         href="/"
-        title="theFront"
+        title="silviucostache.com"
         width={{ xs: 200, md: 200 }}
       >
         <Box
@@ -121,6 +124,9 @@ const Topbar = ({
           >
             Buy now
           </Button>
+        </Box>
+        <Box marginLeft={4}>
+          <ThemeModeToggler />
         </Box>
       </Box>
       <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>

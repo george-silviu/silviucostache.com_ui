@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
-import { PortfolioMasonry as PortfolioMasonryView } from 'views';
 import { HomePage as HomePageView } from 'views';
+import { PortofolioPage as PortofolioPageView } from 'views';
 
 const routes = [
   {
@@ -9,10 +9,8 @@ const routes = [
     renderer: (params = {}): JSX.Element => <HomePageView {...params} />,
   },
   {
-    path: '/test',
-    renderer: (params = {}): JSX.Element => (
-      <PortfolioMasonryView {...params} />
-    ),
+    path: '/portofolio',
+    renderer: (params = {}): JSX.Element => <PortofolioPageView {...params} />,
   },
 ];
 
