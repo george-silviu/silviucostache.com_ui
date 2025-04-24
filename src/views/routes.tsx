@@ -2,6 +2,7 @@ import { JSX } from 'react';
 
 import { HomePage as HomePageView } from 'views';
 import { PortofolioPage as PortofolioPageView } from 'views';
+import { ProjectPage as ProjectView } from 'views';
 
 const routes = [
   {
@@ -11,6 +12,10 @@ const routes = [
   {
     path: '/portofolio',
     renderer: (params = {}): JSX.Element => <PortofolioPageView {...params} />,
+  },
+  {
+    path: '/project',
+    renderer: (params = {}): JSX.Element => <ProjectView {...params} />,
   },
 ];
 

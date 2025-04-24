@@ -3,7 +3,7 @@ import Main from 'layouts/Main';
 
 import Container from 'components/Container';
 import Box from '@mui/material/Box';
-import { Hero, About, Numbers, Projects, Contact, Form } from './components';
+import { Hero, About, Numbers, Projects, Form } from './components';
 import { useTheme } from '@mui/material/styles';
 
 const HomePage = (): JSX.Element => {
