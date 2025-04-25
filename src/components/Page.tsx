@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { JSX, useState, useEffect } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import CssBaseline from '@mui/material/CssBaseline';

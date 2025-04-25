@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, JSX } from 'react';
 import Box from '@mui/material/Box';
 import { alpha, useTheme } from '@mui/material/styles';
 import Menu from '@mui/material/Menu';
@@ -67,9 +67,7 @@ const NavItem = ({
         onMouseOver={handleClick}
         onMouseLeave={handleCloseHover}
       >
-        <Typography color={linkColor}>
-          {title}
-        </Typography>
+        <Typography color={linkColor}>{title}</Typography>
         <ExpandMoreIcon
           sx={{
             marginLeft: theme.spacing(1 / 4),
@@ -97,7 +95,7 @@ const NavItem = ({
         PaperProps={{
           onMouseEnter: handleHover,
           onMouseLeave: handleCloseHover,
-          style: { pointerEvents: 'auto' }
+          style: { pointerEvents: 'auto' },
         }}
         sx={{
           '.MuiPaper-root': {
@@ -136,9 +134,7 @@ const NavItem = ({
                   fontWeight: activeLink === p.href ? 600 : 400,
                 }}
               >
-                <Typography variant={'body2'}>
-                  {p.title}
-                </Typography>
+                <Typography variant={'body2'}>{p.title}</Typography>
                 {p.isNew && (
                   <Box
                     padding={0.5}

@@ -5,20 +5,12 @@ import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import { NavItem } from './components';
-import TopNav from 'components/TopNav';
 import ThemeModeToggler from 'components/ThemeModeToggler';
 
 interface Props {
   // eslint-disable-next-line @typescript-eslint/ban-types
   onSidebarOpen: () => void;
-  pages: {
-    landings: Array<PageItem>;
-    company: Array<PageItem>;
-    account: Array<PageItem>;
-    secondary: Array<PageItem>;
-    blog: Array<PageItem>;
-    portfolio: Array<PageItem>;
-  };
+  pages: Array<PageItem>;
   colorInvert?: boolean;
 }
 
@@ -29,15 +21,6 @@ const Topbar = ({
 }: Props): JSX.Element => {
   const theme = useTheme();
   const { mode } = theme.palette;
-
-  const {
-    landings: landingPages,
-    secondary: secondaryPages,
-    company: companyPages,
-    account: accountPages,
-    portfolio: portfolioPages,
-    blog: blogPages,
-  } = pages;
 
   return (
     <Box
@@ -65,7 +48,11 @@ const Topbar = ({
         />
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <Box>
+        {pages.map((page) => (
+          <Button colorInvert>{page.title}</Button>
+        ))}
+
+        {/* <Box>
           <NavItem
             title={'Landings'}
             id={'landing-pages'}
@@ -124,7 +111,8 @@ const Topbar = ({
           >
             Buy now
           </Button>
-        </Box>
+        </Box> */}
+
         <Box marginLeft={4}>
           <ThemeModeToggler />
         </Box>

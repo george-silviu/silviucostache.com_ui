@@ -1,4 +1,4 @@
-import React from 'react';
+import { JSX } from 'react';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 

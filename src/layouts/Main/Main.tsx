@@ -5,12 +5,8 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import AppBar from '@mui/material/AppBar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-
 import Container from 'components/Container';
-import TopNav from 'components/TopNav';
-
 import { Topbar, Sidebar, Footer } from './components';
-
 import pages from '../navigation';
 
 interface Props {
@@ -48,11 +44,6 @@ const Main = ({
 
   return (
     <Box>
-      {/* <Box bgcolor={bgcolor} position={'relative'} zIndex={theme.zIndex.appBar}>
-        <Container paddingTop={'8px !important'} paddingBottom={'0 !important'}>
-          <TopNav colorInvert={colorInvert} />
-        </Container>
-      </Box> */}
       <AppBar
         position={'sticky'}
         sx={{
@@ -61,7 +52,7 @@ const Main = ({
         }}
         elevation={trigger ? 1 : 0}
       >
-        <Container paddingY={1}>
+        <Container paddingY={2}>
           <Topbar
             onSidebarOpen={handleSidebarOpen}
             pages={pages}

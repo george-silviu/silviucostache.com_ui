@@ -1,4 +1,4 @@
-import React from 'react';
+import { JSX } from 'react';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import { SidebarNav } from './components';
@@ -8,14 +8,7 @@ interface Props {
   onClose: () => void;
   open: boolean;
   variant: 'permanent' | 'persistent' | 'temporary' | undefined;
-  pages: {
-    landings: Array<PageItem>;
-    company: Array<PageItem>;
-    account: Array<PageItem>;
-    secondary: Array<PageItem>;
-    blog: Array<PageItem>;
-    portfolio: Array<PageItem>;
-  };
+  pages: Array<PageItem>;
 }
 
 const Sidebar = ({ pages, open, variant, onClose }: Props): JSX.Element => {
