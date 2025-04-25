@@ -61,23 +61,24 @@ const Hero = (): JSX.Element => {
             variant="h2"
             gutterBottom
             sx={{
+              textAlign: 'center',
               fontWeight: 900,
               color: 'common.white',
               textTransform: 'uppercase',
             }}
           >
-            Our work
+            Costache George Silviu
           </Typography>
           <Typography
             variant="h5"
             component="p"
             color="text.primary"
             sx={{
+              textAlign: 'center',
               color: 'common.white',
             }}
           >
-            We are founded by a leading academic and researcher in the field of
-            Industrial Systems Engineering.
+            Full-stack web developer commited to deliver value.
           </Typography>
         </Box>
       </Container>

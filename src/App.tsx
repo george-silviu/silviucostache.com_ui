@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Routes from './Routes';
 import Page from './components/Page';

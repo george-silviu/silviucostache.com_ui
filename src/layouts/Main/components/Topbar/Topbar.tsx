@@ -49,7 +49,7 @@ const Topbar = ({
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         {pages.map((page) => (
-          <Button colorInvert>{page.title}</Button>
+          <NavItem title={page.title} />
         ))}
 
         {/* <Box>
@@ -100,18 +100,22 @@ const Topbar = ({
             colorInvert={colorInvert}
           />
         </Box>
-        <Box marginLeft={4}>
+       */}
+
+        <Box marginLeft={3}>
           <Button
             variant="contained"
             color="primary"
             component="a"
-            target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
+            href="/portofolio"
             size="large"
+            sx={{
+              color: 'common.white',
+            }}
           >
             Buy now
           </Button>
-        </Box> */}
+        </Box>
 
         <Box marginLeft={4}>
           <ThemeModeToggler />
