@@ -164,9 +164,36 @@
 
 import { JSX } from 'react';
 import { Button } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
-const NavItem = ({ title }): JSX.Element => {
-  return <Button>{title}</Button>;
+interface Props {
+  title: string;
+  mode: string;
+}
+
+const NavItem = ({ title, mode }: Props): JSX.Element => {
+  const theme = useTheme();
+
+  const linkColor = mode === 'dark' ? 'white' : 'black';
+  const hoverColor = mode === 'dark' ? 'white' : 'black';
+
+  return (
+    <Button
+      variant="text"
+      component="a"
+      size="large"
+      href=""
+      sx={{
+        color: linkColor,
+        '&:hover': {
+          color: hoverColor,
+          backgroundColor: '#10B981',
+        },
+      }}
+    >
+      {title}
+    </Button>
+  );
 };
 
 export default NavItem;
