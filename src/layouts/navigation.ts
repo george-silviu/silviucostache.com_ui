@@ -1,11 +1,11 @@
 const pages = [
   {
-    title: 'Portofolio',
-    href: '/portofolio',
+    title: 'Home',
+    href: '/',
   },
   {
-    title: 'Project',
-    href: '/project',
+    title: 'Portofolio',
+    href: '/portofolio',
   },
 ];
 

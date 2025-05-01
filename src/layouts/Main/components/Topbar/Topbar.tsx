@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-
 import { NavItem } from './components';
 import ThemeModeToggler from 'components/ThemeModeToggler';
 
@@ -49,7 +48,7 @@ const Topbar = ({
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         {pages.map((page) => (
-          <NavItem title={page.title} mode={mode} />
+          <NavItem title={page.title} href={page.href} />
         ))}
 
         <Box marginLeft={2}>
