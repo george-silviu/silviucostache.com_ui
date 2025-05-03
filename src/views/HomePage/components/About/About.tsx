@@ -35,19 +35,16 @@ const About = (): JSX.Element => {
                 fontWeight: 700,
               }}
             >
-              Monitor and analyze usage patterns.
+              What I Bring to the Table
             </Typography>
             <Typography data-aos={'fade-up'}>
-              Keep track of what's happening with your data, change permissions,
-              and run reports against your data anywhere in the world.Keep track
-              of what's happening with your data, change permissions, and run
-              reports against your data anywhere in the world.Keep track of
-              what's happening with your data, change permissions, and run
-              reports against your data anywhere in the world.Keep track of
-              what's happening with your data, change permissions, and run
-              reports against your data anywhere in the world.Keep track of
-              what's happening with your data, change permissions, and run
-              reports against your data anywhere in the world.
+              I’m a full-stack developer with 4 years of experience delivering
+              clean, maintainable code and collaborating on diverse projects —
+              from early MVPs to complex platforms. I combine technical
+              execution with a deep understanding of product and business goals,
+              making sure every line of code contributes to real value. I'm not
+              just doing my job, I struggle to innovate and I'm constantly
+              asking myself how can I deliver more value
             </Typography>
           </Box>
         </Grid>
