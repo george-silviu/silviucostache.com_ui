@@ -6,7 +6,7 @@ const pages = {
     },
     {
       title: 'Projects',
-      href: '/portofolio',
+      href: '/projects',
     },
     {
       title: 'Project',

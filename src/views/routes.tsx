@@ -10,7 +10,7 @@ const routes = [
     renderer: (params = {}): JSX.Element => <HomePageView {...params} />,
   },
   {
-    path: '/portofolio',
+    path: '/projects',
     renderer: (params = {}): JSX.Element => <PortofolioPageView {...params} />,
   },
   {

@@ -51,7 +51,6 @@ const Footer = (): JSX.Element => {
                 underline="none"
                 component="a"
                 href="/projects"
-                target={'blank'}
                 color="text.primary"
                 variant={'subtitle2'}
               >
