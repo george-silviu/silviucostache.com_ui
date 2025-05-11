@@ -3,13 +3,17 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
+
 import { NavItem } from './components';
+
 import ThemeModeToggler from 'components/ThemeModeToggler';
 
 interface Props {
   // eslint-disable-next-line @typescript-eslint/ban-types
   onSidebarOpen: () => void;
-  pages: Array<PageItem>;
+  pages: {
+    discoverMore: Array<PageItem>;
+  };
   colorInvert?: boolean;
 }
 
@@ -20,6 +24,7 @@ const Topbar = ({
 }: Props): JSX.Element => {
   const theme = useTheme();
   const { mode } = theme.palette;
+  const { discoverMore } = pages;
 
   return (
     <Box
@@ -32,26 +37,29 @@ const Topbar = ({
         display={'flex'}
         component="a"
         href="/"
-        title="silviucostache.com"
+        title="theFront"
         width={{ xs: 200, md: 200 }}
       >
         <Box
           component={'img'}
           src={
-            mode === 'light' && !colorInvert
-              ? './logo_w_bg.svg'
-              : './logo_b_bg.svg'
+            mode === 'light' && !colorInvert ? 'logo_w_bg.svg' : 'logo_b_bg.svg'
           }
           height={1}
           width={1}
         />
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        {pages.map((page) => (
-          <NavItem title={page.title} href={page.href} />
-        ))}
+        <Box>
+          <NavItem
+            title={'Discover'}
+            id={'discover-more'}
+            items={discoverMore}
+            colorInvert={colorInvert}
+          />
+        </Box>
 
-        <Box marginLeft={2}>
+        <Box marginLeft={4}>
           <ThemeModeToggler />
         </Box>
       </Box>

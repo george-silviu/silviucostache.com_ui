@@ -1,4 +1,4 @@
-import React from 'react';
+import { JSX } from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -25,15 +25,11 @@ const Footer = (): JSX.Element => {
             component="a"
             href="/"
             title="theFront"
-            width={80}
+            width={150}
           >
             <Box
               component={'img'}
-              src={
-                mode === 'light'
-                  ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                  : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-              }
+              src={mode === 'light' ? 'logo_w_bg.svg' : 'logo_b_bg.svg'}
               height={1}
               width={1}
             />
@@ -54,25 +50,13 @@ const Footer = (): JSX.Element => {
               <Link
                 underline="none"
                 component="a"
-                href="https://thefront.maccarianagency.com/docs/introduction"
+                href="/projects"
                 target={'blank'}
                 color="text.primary"
                 variant={'subtitle2'}
               >
-                Documentation
+                Projects
               </Link>
-            </Box>
-            <Box marginTop={1}>
-              <Button
-                variant="outlined"
-                color="primary"
-                component="a"
-                target="blank"
-                href="https://mui.com/store/items/the-front-landing-page/"
-                size="small"
-              >
-                Purchase now
-              </Button>
             </Box>
           </Box>
         </Box>
@@ -84,18 +68,7 @@ const Footer = (): JSX.Element => {
           color="text.secondary"
           gutterBottom
         >
-          &copy; theFront. 2021, Silviu Costache. All rights reserved
-        </Typography>
-        <Typography
-          align={'center'}
-          variant={'caption'}
-          color="text.secondary"
-          component={'p'}
-        >
-          When you visit or interact with our sites, services or tools, we or
-          our authorised service providers may use cookies for storing
-          information to help provide you with a better, faster and safer
-          experience and for marketing purposes.
+          &copy; Silviu Costache, 2025 All rights reserved
         </Typography>
       </Grid>
     </Grid>

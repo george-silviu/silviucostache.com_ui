@@ -38,13 +38,13 @@ const About = (): JSX.Element => {
               What I Bring to the Table
             </Typography>
             <Typography data-aos={'fade-up'}>
-              I’m a full-stack developer with 4 years of experience delivering
-              clean, maintainable code and collaborating on diverse projects —
-              from early MVPs to complex platforms. I combine technical
-              execution with a deep understanding of product and business goals,
-              making sure every line of code contributes to real value. I'm not
-              just doing my job, I struggle to innovate and I'm constantly
-              asking myself how can I deliver more value
+              I'm a full-stack developer dedicated to building systems that
+              solve real-world problems and deliver tangible value. I've worked
+              with startups and mid-sized companies across both private and
+              public sectors, developing solutions for diverse business needs.
+              I'm recognized for my professionalism, strong ethics, analytical
+              thinking, and ability to tackle complex challenges with
+              accountability.
             </Typography>
           </Box>
         </Grid>

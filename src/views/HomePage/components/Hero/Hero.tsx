@@ -28,7 +28,7 @@ const Hero = (): JSX.Element => {
       data-jarallax
       data-speed="0.2"
       position={'relative'}
-      minHeight={{ xs: 400, sm: 500, md: 700 }}
+      minHeight={{ xs: 600, sm: 500, md: 700 }}
       display={'flex'}
       alignItems={'center'}
       marginTop={-13}
@@ -70,6 +70,17 @@ const Hero = (): JSX.Element => {
             Costache George Silviu
           </Typography>
           <Typography
+            variant="h3"
+            component="p"
+            color="text.primary"
+            sx={{
+              textAlign: 'center',
+              color: 'common.white',
+            }}
+          >
+            Full stack developer
+          </Typography>
+          <Typography
             variant="h5"
             component="p"
             color="text.primary"
@@ -78,7 +89,7 @@ const Hero = (): JSX.Element => {
               color: 'common.white',
             }}
           >
-            Full-stack web developer commited to deliver value.
+            „First do it. Then do it better. Then do it perfect.”
           </Typography>
         </Box>
       </Container>

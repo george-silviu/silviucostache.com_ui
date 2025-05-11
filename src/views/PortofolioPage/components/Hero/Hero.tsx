@@ -1,4 +1,4 @@
-import React from 'react';
+import { JSX } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
@@ -35,7 +35,7 @@ const Hero = (): JSX.Element => {
       <Container
         zIndex={3}
         position={'relative'}
-        minHeight={{ xs: 300, sm: 400, md: 600 }}
+        minHeight={{ xs: 450, sm: 400, md: 600 }}
         maxHeight={600}
         display={'flex'}
         alignItems={'center'}
@@ -51,7 +51,7 @@ const Hero = (): JSX.Element => {
                 color: theme.palette.common.white,
               }}
             >
-              Newsroom
+              Projects
             </Typography>
           </Box>
           <Box>
@@ -62,7 +62,7 @@ const Hero = (): JSX.Element => {
                 color: theme.palette.common.white,
               }}
             >
-              Latest updates and Hand-picked resources.
+              Applied knowledge. Measurable outcomes.
             </Typography>
           </Box>
         </Box>

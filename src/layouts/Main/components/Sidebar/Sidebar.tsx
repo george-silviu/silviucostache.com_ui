@@ -8,7 +8,9 @@ interface Props {
   onClose: () => void;
   open: boolean;
   variant: 'permanent' | 'persistent' | 'temporary' | undefined;
-  pages: Array<PageItem>;
+  pages: {
+    discoverMore: Array<PageItem>;
+  };
 }
 
 const Sidebar = ({ pages, open, variant, onClose }: Props): JSX.Element => {
