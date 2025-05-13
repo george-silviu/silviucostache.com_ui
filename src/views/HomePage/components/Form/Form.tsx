@@ -12,18 +12,6 @@ import { Card } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
 const validationSchema = yup.object({
-  firstName: yup
-    .string()
-    .trim()
-    .min(2, 'Please enter a valid name')
-    .max(50, 'Please enter a valid name')
-    .required('Please specify your first name'),
-  lastName: yup
-    .string()
-    .trim()
-    .min(2, 'Please enter a valid name')
-    .max(50, 'Please enter a valid name')
-    .required('Please specify your last name'),
   email: yup
     .string()
     .trim()
@@ -36,8 +24,6 @@ const Contact = (): JSX.Element => {
   const theme = useTheme();
 
   const initialValues = {
-    firstName: '',
-    lastName: '',
     email: '',
     message: '',
   };
@@ -67,7 +53,20 @@ const Contact = (): JSX.Element => {
           align={'center'}
           gutterBottom
         >
-          Contact us
+          Let&apos;s{' '}
+          <Box
+            component="span"
+            sx={{
+              backgroundColor: `${theme.palette.primary.main}`,
+              color: '#1B1F3B',
+              px: 1,
+              borderRadius: '4px',
+              display: 'inline-block',
+            }}
+          >
+            build
+          </Box>{' '}
+          together!
         </Typography>
         <Typography color="text.secondary" align={'center'}>
           Rather than worrying about switching offices every couple years, you
@@ -78,42 +77,6 @@ const Contact = (): JSX.Element => {
       <Box>
         <form onSubmit={formik.handleSubmit}>
           <Grid container spacing={4}>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                sx={{ height: 54 }}
-                label="First name"
-                variant="outlined"
-                color="primary"
-                size="medium"
-                name="firstName"
-                fullWidth
-                value={formik.values.firstName}
-                onChange={formik.handleChange}
-                error={
-                  formik.touched.firstName && Boolean(formik.errors.firstName)
-                }
-                // @ts-ignore
-                helperText={formik.touched.firstName && formik.errors.firstName}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                sx={{ height: 54 }}
-                label="Last name"
-                variant="outlined"
-                color="primary"
-                size="medium"
-                name="lastName"
-                fullWidth
-                value={formik.values.lastName}
-                onChange={formik.handleChange}
-                error={
-                  formik.touched.lastName && Boolean(formik.errors.lastName)
-                }
-                // @ts-ignore
-                helperText={formik.touched.lastName && formik.errors.lastName}
-              />
-            </Grid>
             <Grid item xs={12}>
               <TextField
                 sx={{ height: 54 }}
@@ -153,53 +116,11 @@ const Contact = (): JSX.Element => {
                 sx={{ height: 54, minWidth: 150 }}
                 variant="contained"
                 color="primary"
-                size="medium"
+                size="large"
                 type="submit"
               >
                 Submit
               </Button>
-            </Grid>
-            <Grid item container justifyContent={'center'} xs={12}>
-              <Typography color="text.secondary">
-                We'll get back to you in 1-2 business days.
-              </Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Divider />
-            </Grid>
-            <Grid item container justifyContent={'center'} xs={12}>
-              <Box>
-                <Typography component="p" variant="body2" align="left">
-                  By clicking on "submit" you agree to our{' '}
-                  <Box
-                    component="a"
-                    href=""
-                    color={theme.palette.text.primary}
-                    fontWeight={'700'}
-                  >
-                    Privacy Policy
-                  </Box>
-                  ,{' '}
-                  <Box
-                    component="a"
-                    href=""
-                    color={theme.palette.text.primary}
-                    fontWeight={'700'}
-                  >
-                    Data Policy
-                  </Box>{' '}
-                  and{' '}
-                  <Box
-                    component="a"
-                    href=""
-                    color={theme.palette.text.primary}
-                    fontWeight={'700'}
-                  >
-                    Cookie Policy
-                  </Box>
-                  .
-                </Typography>
-              </Box>
             </Grid>
           </Grid>
         </form>

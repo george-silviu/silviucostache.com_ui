@@ -67,7 +67,7 @@ const Footer = (): JSX.Element => {
           color="text.secondary"
           gutterBottom
         >
-          &copy; Silviu Costache, 2025 All rights reserved
+          &copy; 2025 Silviu Costache. All rights reserved.
         </Typography>
       </Grid>
     </Grid>
