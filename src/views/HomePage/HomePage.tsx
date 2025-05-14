@@ -22,10 +22,10 @@ const HomePage = (): JSX.Element => {
         <Projects />
       </Container>
       <Box
-      // sx={{
-      //   background: 'transparent',
-      //   backgroundImage: `linear-gradient(180deg, ${theme.palette.background.paper} 40%, ${theme.palette.primary.main} 0%)`,
-      // }}
+        sx={{
+          borderRadius: 5,
+          background: `linear-gradient(180deg, ${theme.palette.primary.main} 0%, ${theme.palette.background.paper} 100%)`,
+        }}
       >
         <Container>
           <Form />
