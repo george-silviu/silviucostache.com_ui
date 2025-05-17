@@ -1,4 +1,4 @@
-import React from 'react';
+import { JSX } from 'react';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -6,14 +6,7 @@ import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import Chip from '@mui/material/Chip';
 
-const mock = [
-  'Business',
-  'Strategy',
-  'Health',
-  'Creative',
-  'Environment',
-  'Stories',
-];
+const labels = ['Node', 'React', 'Postgres', 'ZTM'];
 
 const SearchBox = (): JSX.Element => {
   return (
@@ -80,7 +73,7 @@ const SearchBox = (): JSX.Element => {
         </form>
       </Box>
       <Box>
-        {mock.map((item) => (
+        {labels.map((item) => (
           <Chip
             key={item}
             label={item}

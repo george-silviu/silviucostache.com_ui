@@ -74,8 +74,8 @@ const Hero = (): JSX.Element => {
         x="0px"
         y="0px"
         viewBox="0 0 1920 100.1"
-        width={1}
-        maxHeight={120}
+        width="100%"
+        height={50}
         bottom={0}
         position={'absolute'}
         zIndex={2}

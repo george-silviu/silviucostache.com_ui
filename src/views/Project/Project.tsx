@@ -8,8 +8,7 @@ import { useTheme } from '@mui/material/styles';
 import Pagination from '@mui/material/Pagination';
 
 import Content from './components/Content';
-
-import Form from '../HomePage/components/Form/Form';
+import ContactForm from 'components/ContactForm';
 
 const ProjectView = (): JSX.Element => {
   const theme = useTheme();
@@ -56,17 +55,7 @@ const ProjectView = (): JSX.Element => {
         <Content />
       </Container>
 
-      {/* Form */}
-      <Box
-        sx={{
-          background: 'transparent',
-          backgroundImage: `linear-gradient(180deg, ${theme.palette.background.paper} 40%, ${theme.palette.primary.main} 0%)`,
-        }}
-      >
-        <Container>
-          <Form />
-        </Container>
-      </Box>
+      <ContactForm />
     </Main>
   );
 };

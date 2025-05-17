@@ -4,7 +4,8 @@ import { useTheme } from '@mui/material/styles';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import { Hero, SearchBox, Projects, Form } from './components';
+import ContactForm from 'components/ContactForm';
+import { Hero, SearchBox, Projects } from './components';
 
 const BlogReachView = (): JSX.Element => {
   const theme = useTheme();
@@ -27,16 +28,7 @@ const BlogReachView = (): JSX.Element => {
           <Projects />
         </Container>
 
-        <Box
-          sx={{
-            background: 'transparent',
-            backgroundImage: `linear-gradient(180deg, ${theme.palette.background.paper} 40%, ${theme.palette.primary.main} 0%)`,
-          }}
-        >
-          <Container>
-            <Form />
-          </Container>
-        </Box>
+        <ContactForm />
       </Box>
     </Main>
   );

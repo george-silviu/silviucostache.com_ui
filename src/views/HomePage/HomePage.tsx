@@ -2,8 +2,9 @@ import { JSX } from 'react';
 import Main from 'layouts/Main';
 
 import Container from 'components/Container';
+import ContactForm from 'components/ContactForm';
 import Box from '@mui/material/Box';
-import { Hero, About, Numbers, Projects, Form } from './components';
+import { Hero, About, Numbers, Projects } from './components';
 import { useTheme } from '@mui/material/styles';
 
 const HomePage = (): JSX.Element => {
@@ -21,16 +22,8 @@ const HomePage = (): JSX.Element => {
       <Container>
         <Projects />
       </Container>
-      <Box
-        sx={{
-          borderRadius: 5,
-          background: `linear-gradient(180deg, ${theme.palette.primary.main} 0%, ${theme.palette.background.paper} 100%)`,
-        }}
-      >
-        <Container>
-          <Form />
-        </Container>
-      </Box>
+
+      <ContactForm />
     </Main>
   );
 };
