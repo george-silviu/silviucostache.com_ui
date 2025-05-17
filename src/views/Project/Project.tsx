@@ -15,7 +15,6 @@ const ProjectView = (): JSX.Element => {
 
   return (
     <Main>
-      {/* Title */}
       <Box marginTop={5}>
         <Typography
           variant="h3"
@@ -29,7 +28,6 @@ const ProjectView = (): JSX.Element => {
         </Typography>
       </Box>
 
-      {/* Showcase */}
       <Container>
         <Box
           component={'img'}
@@ -50,7 +48,6 @@ const ProjectView = (): JSX.Element => {
         </Grid>
       </Container>
 
-      {/* Article */}
       <Container>
         <Content />
       </Container>
